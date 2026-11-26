@@ -67,3 +67,17 @@ dm:A00107 md:hasSon dm:A00105 .
 dm:A00108 md:hasSon dm:A00105 .
 dm:A00107 anr:IsAgainst dm:A00103 .
 dm:A00108 anr:IsAgainst dm:A00103 .
+dm:A00098 dm:hasOption dm:A00151 .
+dm:A00098 dm:hasOption dm:A00102 .
+dm:A00151 dm:hasOption dm:A00099 .
+dm:A00151 dm:hasOption dm:A00100 .
+dm:A00151 dm:hasOption dm:A00101 .
+dm:A00099 anr:concernsPerson dm:A00106 .
+dm:A00100 anr:concernsPerson dm:A00111 .
+dm:A00101 anr:concernsPerson dm:A00112 .
+dm:A00103 dm:realizesOption dm:A00099 .
+dm:A00150 schema:isPartOf dm:A00090 .
+dm:A00151 dm:isSubDilemmaOf dm:A00098 .
+
+#데이터
+{{data}}
