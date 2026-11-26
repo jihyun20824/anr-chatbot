@@ -209,5 +209,3 @@ dm:A00099 anr:concernsPerson dm:A00106 .
 dm:A00100 anr:concernsPerson dm:A00111 .
 dm:A00101 anr:concernsPerson dm:A00112 .
 
-# 데이터
-{{data}}
