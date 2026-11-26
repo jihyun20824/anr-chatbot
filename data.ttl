@@ -1,0 +1,69 @@
+@prefix dm: <http://example.org/dm/> .
+@prefix anr: <http://example.org/anr/> .
+@prefix schema: <https://schema.org/> .
+@prefix md: <http://example.org/md/> .
+
+# Instances
+
+dm:A00090 a dm:Work ; schema:name "아노라"@ko ; schema:description "2024년에 개봉한 션 베이커가 감독한 장편 영화이다."@ko ; schema:director dm:A00092 ; anr:firstShownAt dm:A00094 .
+dm:A00091 a dm:Concept ; schema:name "영화"@ko ; schema:description "움직이는 영상과 소리로 이야기를 전하는 형식이다."@ko .
+dm:A00092 a dm:Person ; schema:name "션 베이커"@ko ; schema:description "1971년 출생, 아노라의 각본과 연출을 맡은 미국의 영화감독이다"@ko .
+dm:A00093 a dm:Concept ; schema:name "로맨틱 코미디"@ko ; schema:description "연애를 중심 사건으로 삼아 웃음을 주는 영화 장르이다."@ko .
+dm:A00094 a dm:Event ; schema:name "제77회 칸 영화제"@ko ; schema:description "2024년 5월 프랑스 칸에서 열린 국제 영화제로 아노라가 처음 상영되었다."@ko .
+dm:A00095 a dm:Organization ; schema:name "유니버셜 픽쳐스"@ko ; schema:description "미국의 영화 제작·배급사이다."@ko .
+dm:A00096 a dm:Organization ; schema:name "Cre Film"@en ; schema:description "션 베이커의 영화를 만들어 온 미국의 제작사이다."@ko .
+dm:A00097 a dm:Organization ; schema:name "FilmNation Entertainment"@en ; schema:description "미국의 영화 제작·판매사이다."@ko .
+dm:A00098 a dm:Dilemma ; schema:name "이반: 결혼해서 미국에 남을 것인가"@ko ; schema:description "미국에서 결혼해 영주권과 자유를 얻을지, 결혼하지 않고 러시아로 돌아가 가족과 기업 상속을 지킬지를 두고 이반이 내려야 했던 선택이다."@ko ; dm:hasOption dm:A00102 .
+dm:A00099 a dm:Option ; schema:name "애니에게 청혼한다"@ko ; schema:description "미국에 남고자 애니와 결혼하고자 청혼한다. 작업자 해석: 영주권과 자유를 얻는 대신 부모와의 관계와 기업 상속을 잃는다."@ko ; dm:actualChooser dm:A00105 ; dm:isRealizedBy dm:A00103 .
+dm:A00100 a dm:Option ; schema:name "크리스탈에게 청혼한다"@ko ; schema:description "미국에 남고자 크리스탈과 결혼하고자 청혼한다. 작업자 해석: 영주권과 자유를 얻는 대신 부모와의 관계와 기업 상속을 잃는다."@ko .
+dm:A00101 a dm:Option ; schema:name "룰루에게 청혼한다"@ko ; schema:description "미국에 남고자 룰루와 결혼하고자 청혼한다. 작업자 해석: 영주권과 자유를 얻는 대신 부모와의 관계와 기업 상속을 잃는다."@ko .
+dm:A00102 a dm:Option ; schema:name "러시아로 돌아간다"@ko ; schema:description "결혼하지 않고 러시아로 돌아가는 선택지이다. 작업자 해석: 부모와의 관계와 기업 상속을 지키는 대신 미국에서의 자유를 잃는다."@ko .
+dm:A00103 a dm:Event ; schema:name "이반과 애니의 라스베이거스 결혼"@ko ; schema:description "라스베이거스 여행 중 이반이 애니에게 청혼하고, 두 사람이 그곳에서 결혼한 일이다."@ko ; dm:hasParticipant dm:A00106, dm:A00105 ; schema:location dm:A00114 ; anr:relatedInstitution dm:A00109 ; dm:isReasonFor dm:A00110 .
+dm:A00104 a dm:Concept ; schema:name "미국 비자"@ko ; schema:description "외국인이 미국에 들어가 머무를 수 있는 자격으로, 종류마다 목적과 체류 기한이 정해져 있다. 영어 명칭: U.S. visa."@ko .
+dm:A00105 a dm:Person ; schema:name "이반"@ko ; schema:description "러시아 부호의 아들로, 애칭은 반야이다. 애니가 일하는 업소에 손님으로 찾아온다."@ko ; anr:staysUnder dm:A00104 ; anr:canmarry dm:A00106, dm:A00111, dm:A00112 .
+dm:A00106 a dm:Person ; schema:name "애니"@ko ; schema:description "뉴욕 브루클린에서 일하는 성노동자로, 본명은 아노라이다."@ko .
+dm:A00107 a dm:Person ; schema:name "이반 아빠"@ko ; schema:description "러시아의 부호로 이반이 미국에 남는 것을 반대한다."@ko ; md:hasSon dm:A00105 ; anr:IsAgainst dm:A00103 .
+dm:A00108 a dm:Person ; schema:name "이반 엄마"@ko ; schema:description "러시아의 부호로 이반이 미국에 남는 것을 반대한다."@ko ; md:hasSon dm:A00105 ; anr:IsAgainst dm:A00103 .
+dm:A00109 a dm:Concept ; schema:name "네바다주 혼인 허가"@ko ; schema:description "네바다주에서 결혼하려면 카운티 사무소에서 받아야 하는 허가로, 대기 기간이 없어 라스베이거스에서는 당일 결혼이 가능하다. 영어 명칭: Nevada Marriage License."@ko .
+dm:A00110 a dm:Concept ; schema:name "미국 가족 이민"@ko ; schema:description "미국 시민권자의 배우자처럼 가족 관계를 근거로 영주권을 신청하는 제도이다. 영어 명칭: family-based immigration."@ko .
+dm:A00111 a dm:Person ; schema:name "크리스탈"@ko ; schema:description "이반의 친구이다."@ko .
+dm:A00112 a dm:Person ; schema:name "룰루"@ko ; schema:description "애니의 성노동자 동료이다."@ko .
+dm:A00113 a dm:Person ; schema:name "이고로"@ko ; schema:description "이반의 부모가 이반을 찾아오라는 일을 시킨 사람들 중 하나다."@ko .
+dm:A00114 a dm:Place ; schema:name "라스베이거스"@ko ; schema:description "미국 네바다주의 도시로, 혼인 절차가 간단해 빠른 결혼으로 알려져 있다. 작중에서 이반과 애니가 결혼을 위해 이동한 장소이다."@ko .
+dm:A00115 a dm:Scene ; schema:name "ANR_S01"@en ; schema:description "애니가 이반에게 누구와 결혼할지 묻고 이반이 크리스탈과 룰루를 후보로 말하는 장면이다. 넷플릭스 한국 서비스 기준 00:37:07 - 00:37:30"@ko ; schema:isPartOf dm:A00090 .
+dm:A00116 a dm:Concept ; schema:name "혼인 무효"@ko ; schema:description "혼인 무효 소송은 혼인이 처음부터 성립하지 않았던 것으로 돌리는 절차로, 이미 성립한 혼인을 끝내는 이혼과 다르다. 영어 명칭: annulment."@ko .
+dm:A00117 a dm:Concept ; schema:name "혼전 계약서"@ko ; schema:description "결혼 전에 두 사람이 재산 처리 방법 등을 미리 정해 두는 계약이다. 영어 명칭: prenuptial agreement."@ko .
+dm:A00118 a dm:Concept ; schema:name "위장 결혼"@ko ; schema:description "이민 자격을 얻으려는 목적으로만 하는 결혼으로, 미국에서는 이민 사기에 해당한다. 영어 명칭: marriage fraud."@ko .
+
+dm:A00119 a dm:Utterance ; schema:name "이반의 대사: 미국인이 된다"@ko ; schema:description "이반이 애니에게 청혼하며 하는 말이다. 한국어: \"그리고 나는 미국인이 되는 거야! 부모님은 엿이나 먹으라지!\" 원문(영어): \"And I become American! And my parents can go screw!\""@ko ; schema:isPartOf dm:A00115 ; anr:spokenBy dm:A00105 ; anr:spokenTo dm:A00106 ; dm:isEvidenceFor dm:A00098 .
+dm:A00148 a dm:Concept ; schema:name "블랙 코미디"@ko ; schema:description "유머와 함께 사회의 어두운 면을 다루는 영화 장르이다."@ko .
+dm:A00149 a dm:Utterance ; schema:name "이반의 대사: 미국인과 결혼하면, 러시아에 돌아가지 않아도 된다"@ko ; schema:description "이반이 곧 러시아에 돌아가야 하는 상황에서 애니에게 하는 말이다. 한국어: 내가 만약 미국인과 결혼했다면, 돌아가지 않아도 될 텐데. 영어: If I got married to an American, I would never have to go back."@ko ; schema:isPartOf dm:A00150 .
+dm:A00150 a dm:Scene ; schema:name "ANR_S02"@en ; schema:description "이반이 애니에게 청혼하고 결혼하는 장면이다. 넷플릭스 한국 서비스 기준 00:37:31 - 00:40:15"@ko .
+dm:A00151 a dm:Dilemma ; schema:name "이반: 누구와 결혼할 것인가"@ko ; schema:description "애니, 룰루, 크리스탈 셋 중 누구와 결혼할 것인지 선택해야 한다."@ko .
+
+# Additional triples
+
+dm:A00090 schema:director dm:A00092 .
+dm:A00090 anr:firstShownAt dm:A00094 .
+dm:A00115 schema:isPartOf dm:A00090 .
+dm:A00098 dm:hasOption dm:A00102 .
+dm:A00099 dm:actualChooser dm:A00105 .
+dm:A00099 dm:isRealizedBy dm:A00103 .
+dm:A00103 dm:hasParticipant dm:A00106 .
+dm:A00103 schema:location dm:A00114 .
+dm:A00103 anr:relatedInstitution dm:A00109 .
+dm:A00105 anr:staysUnder dm:A00104 .
+dm:A00119 schema:isPartOf dm:A00115 .
+dm:A00119 anr:spokenBy dm:A00105 .
+dm:A00119 anr:spokenTo dm:A00106 .
+dm:A00119 dm:isEvidenceFor dm:A00098 .
+dm:A00149 schema:isPartOf dm:A00150 .
+dm:A00105 anr:canmarry dm:A00106 .
+dm:A00105 anr:canmarry dm:A00111 .
+dm:A00105 anr:canmarry dm:A00112 .
+dm:A00103 dm:isReasonFor dm:A00110 .
+dm:A00103 dm:hasParticipant dm:A00105 .
+dm:A00107 md:hasSon dm:A00105 .
+dm:A00108 md:hasSon dm:A00105 .
+dm:A00107 anr:IsAgainst dm:A00103 .
+dm:A00108 anr:IsAgainst dm:A00103 .
